@@ -1,0 +1,28 @@
+.tabela-tarefas {
+    width: 100%;
+}
+
+.tabela-tarefas th,
+.tabela-tarefas td {
+    border: 1px solid black; /* Adiciona bordas às células */
+    padding: 8px; /* Adiciona espaçamento interno nas células */
+    text-align: left; /* Alinhamento de texto à esquerda nas células */
+}
+
+.tabela-tarefas th {
+    background-color: lightblue; /* Cor de fundo para as células de cabeçalho */
+}
+
+/* Estilos para o botão de remoção */
+.tabela-tarefas .remover {
+    text-align: center; /* Centraliza o botão de remoção */
+}
+
+/* Estilo para o botão de remoção */
+.tabela-tarefas .remover button {
+    background-color: #f44336; /* Cor de fundo vermelha */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
