@@ -31,7 +31,7 @@ botao.addEventListener("click", (evento) => {
     let botaoDeExcluir = document.createElement("button");
     botaoDeExcluir.textContent = " X ";
 
-    // Adiciona o botão à célula de remoção
+    // Adiciona o botão para o X
     tdLinha5.appendChild(botaoDeExcluir);
 
     // Adiciona as células à linha da tabela
@@ -44,10 +44,10 @@ botao.addEventListener("click", (evento) => {
     // Adiciona a linha à tabela
     tabela.querySelector("table").appendChild(tr);
 
-    // Adiciona um ouvinte de evento para o botão de remoção
+    // Adiciona um evento para o botão de remover
     botaoDeExcluir.addEventListener("click", (evento) => {
         evento.preventDefault();
-        // Remove a linha da tabela ao clicar no botão de remoção
+        // Remove a linha da tabela ao clicar no botão X
         tr.remove(); 
     });
 
