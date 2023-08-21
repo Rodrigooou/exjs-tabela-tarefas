@@ -2,25 +2,25 @@
 const botao = document.getElementById("Botao");
 const tabela = document.getElementById("tabela");
 
-// Obtém os valores dos campos do formulário
-const inpTarefa = document.getElementById("IDtarefa");
-const inpAutor = document.getElementById("IDautor");
-const inpDepartamento = document.getElementById("IDdepartamento");
-const inpImportancia = document.getElementById("importancia");
-
-// Cria elementos de tabela para a nova linha
-const tr = document.createElement("tr");
-const tdLinha1 = document.createElement("td");
-const tdLinha2 = document.createElement("td");
-const tdLinha3 = document.createElement("td");
-const tdLinha4 = document.createElement("td");
-const tdLinha5 = document.createElement("td");
 
 // Adiciona um evento para o botão de clique
 botao.addEventListener("click", (evento) => {
     evento.preventDefault(); // Impede o comportamento padrão do formulário
-
-
+    
+    // Obtém os valores dos campos do formulário
+    const inpTarefa = document.getElementById("IDtarefa");
+    const inpAutor = document.getElementById("IDautor");
+    const inpDepartamento = document.getElementById("IDdepartamento");
+    const inpImportancia = document.getElementById("importancia");
+    
+    // Cria elementos de tabela para a nova linha
+    const tr = document.createElement("tr");
+    const tdLinha1 = document.createElement("td");
+    const tdLinha2 = document.createElement("td");
+    const tdLinha3 = document.createElement("td");
+    const tdLinha4 = document.createElement("td");
+    const tdLinha5 = document.createElement("td");
+    
     // Preenche as células da tabela com os valores dos campos do formulário
     tdLinha1.textContent = inpTarefa.value;
     tdLinha2.textContent = inpDepartamento.value;
