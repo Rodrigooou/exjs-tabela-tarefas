@@ -1,6 +1,7 @@
 // Obtém o elemento do botão e a tabela
 const botao = document.getElementById("Botao");
 const tabela = document.getElementById("tabela");
+const botaoImportancia = document.getElementById("BotaoImportancia");
 
 
 // Adiciona um evento para o botão de clique
@@ -50,9 +51,16 @@ botao.addEventListener("click", (evento) => {
         // Remove a linha da tabela ao clicar no botão X
         tr.remove(); 
     });
-
+    
     // Limpa os campos do formulário após adicionar a tarefa
     inpTarefa.value = "";
     inpDepartamento.value = "";
     inpAutor.value = "";
+    
+});
+
+botao.addEventListener("click", (evento) => {
+    evento.preventDefault();
+    
+    
 });
