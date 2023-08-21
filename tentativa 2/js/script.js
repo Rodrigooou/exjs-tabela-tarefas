@@ -23,8 +23,8 @@ botao.addEventListener("click", (evento) => {
     
     // Preenche as células da tabela com os valores dos campos do formulário
     tdLinha1.textContent = inpTarefa.value;
-    tdLinha2.textContent = inpDepartamento.value;
-    tdLinha3.textContent = inpAutor.value;
+    tdLinha2.textContent = inpAutor.value;
+    tdLinha3.textContent = inpDepartamento.value;
     tdLinha4.textContent = inpImportancia.value;
 
     // Cria um botão para remover a linha
