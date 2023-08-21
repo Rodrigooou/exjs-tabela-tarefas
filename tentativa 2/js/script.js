@@ -1,44 +1,45 @@
-// Obtém o elemento do botão e a tabela pelo ID
+// Obtém o elemento do botão e a tabela
 const botao = document.getElementById("Botao");
 const tabela = document.getElementById("tabela");
 
-// Adiciona um ouvinte de evento para o botão de clique
+// Obtém os valores dos campos do formulário
+const inpTarefa = document.getElementById("IDtarefa");
+const inpAutor = document.getElementById("IDautor");
+const inpDepartamento = document.getElementById("IDdepartamento");
+const inpImportancia = document.getElementById("importancia");
+
+// Cria elementos de tabela para a nova linha
+const tr = document.createElement("tr");
+const tdLinha1 = document.createElement("td");
+const tdLinha2 = document.createElement("td");
+const tdLinha3 = document.createElement("td");
+const tdLinha4 = document.createElement("td");
+const tdLinha5 = document.createElement("td");
+
+// Adiciona um evento para o botão de clique
 botao.addEventListener("click", (evento) => {
     evento.preventDefault(); // Impede o comportamento padrão do formulário
 
-    // Obtém os valores dos campos do formulário
-    const inpTarefa = document.getElementById("IDtarefa");
-    const inpAutor = document.getElementById("IDautor");
-    const inpDepartamento = document.getElementById("IDdepartamento");
-    const inpImportancia = document.getElementById("importancia");
-
-    // Cria elementos de tabela para a nova linha
-    const tr = document.createElement("tr");
-    const td1 = document.createElement("td");
-    const td2 = document.createElement("td");
-    const td3 = document.createElement("td");
-    const td4 = document.createElement("td");
-    const td5 = document.createElement("td");
 
     // Preenche as células da tabela com os valores dos campos do formulário
-    td1.textContent = inpTarefa.value;
-    td2.textContent = inpDepartamento.value;
-    td3.textContent = inpAutor.value;
-    td4.textContent = inpImportancia.value;
+    tdLinha1.textContent = inpTarefa.value;
+    tdLinha2.textContent = inpDepartamento.value;
+    tdLinha3.textContent = inpAutor.value;
+    tdLinha4.textContent = inpImportancia.value;
 
     // Cria um botão para remover a linha
     let botaoDeExcluir = document.createElement("button");
     botaoDeExcluir.textContent = " X ";
 
     // Adiciona o botão à célula de remoção
-    td5.appendChild(botaoDeExcluir);
+    tdLinha5.appendChild(botaoDeExcluir);
 
     // Adiciona as células à linha da tabela
-    tr.appendChild(td1);
-    tr.appendChild(td2);
-    tr.appendChild(td3);
-    tr.appendChild(td4);
-    tr.appendChild(td5);
+    tr.appendChild(tdLinha1);
+    tr.appendChild(tdLinha2);
+    tr.appendChild(tdLinha3);
+    tr.appendChild(tdLinha4);
+    tr.appendChild(tdLinha5);
 
     // Adiciona a linha à tabela
     tabela.querySelector("table").appendChild(tr);
