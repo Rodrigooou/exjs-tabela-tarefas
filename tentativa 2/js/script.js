@@ -15,41 +15,41 @@ botao.addEventListener("click", (evento) => {
     const inpImportancia = document.getElementById("importancia");
     
     // Cria elementos de tabela para a nova linha
-    const tr = document.createElement("tr");
-    const tdLinha1 = document.createElement("td");
-    const tdLinha2 = document.createElement("td");
-    const tdLinha3 = document.createElement("td");
-    const tdLinha4 = document.createElement("td");
-    const tdLinha5 = document.createElement("td");
+    const trLinha = document.createElement("tr");
+    const tdColuna1 = document.createElement("td");
+    const tdColuna2 = document.createElement("td");
+    const tdColuna3 = document.createElement("td");
+    const tdColuna4 = document.createElement("td");
+    const tdColuna5 = document.createElement("td");
     
     // Preenche as células da tabela com os valores dos campos do formulário
-    tdLinha1.textContent = inpTarefa.value;
-    tdLinha2.textContent = inpAutor.value;
-    tdLinha3.textContent = inpDepartamento.value;
-    tdLinha4.textContent = inpImportancia.value;
+    tdColuna1.textContent = inpTarefa.value;
+    tdColuna2.textContent = inpAutor.value;
+    tdColuna3.textContent = inpDepartamento.value;
+    tdColuna4.textContent = inpImportancia.value;
 
     // Cria um botão para remover a linha
     let botaoDeExcluir = document.createElement("button");
     botaoDeExcluir.textContent = " X ";
 
     // Adiciona o botão para o X
-    tdLinha5.appendChild(botaoDeExcluir);
+    tdColuna5.appendChild(botaoDeExcluir);
 
     // Adiciona as células à linha da tabela
-    tr.appendChild(tdLinha1);
-    tr.appendChild(tdLinha2);
-    tr.appendChild(tdLinha3);
-    tr.appendChild(tdLinha4);
-    tr.appendChild(tdLinha5);
+    trLinha.appendChild(tdColuna1);
+    trLinha.appendChild(tdColuna2);
+    trLinha.appendChild(tdColuna3);
+    trLinha.appendChild(tdColuna4);
+    trLinha.appendChild(tdColuna5);
 
     // Adiciona a linha à tabela
-    tabela.querySelector("table").appendChild(tr);
+    tabela.querySelector("table").appendChild(trLinha);
 
     // Adiciona um evento para o botão de remover
     botaoDeExcluir.addEventListener("click", (evento) => {
         evento.preventDefault();
         // Remove a linha da tabela ao clicar no botão X
-        tr.remove(); 
+        trLinha.remove(); 
     });
     
     // Limpa os campos do formulário após adicionar a tarefa
