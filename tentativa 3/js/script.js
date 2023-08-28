@@ -12,19 +12,25 @@ const adicionarTarefa = () => {
     const inpAutor = document.getElementById("IDautor");
     const inpDepartamento = document.getElementById("IDdepartamento");
     const inpImportancia = document.getElementById("importancia");
+    const inpValor = document.getElementById("IDvalor");
+    const inpDuracao = document.getElementById("IDduracao");
 
     // Adiciona a tarefa ao array
     tarefas.push({
         tarefa: inpTarefa.value,
         autor: inpAutor.value,
         departamento: inpDepartamento.value,
-        importancia: inpImportancia.value
+        importancia: inpImportancia.value,
+        valor: inpValor.value,
+        duracao: inpDuracao.value
     });
 
     // Limpa os campos do formulário após adicionar a tarefa
     inpTarefa.value = "";
     inpDepartamento.value = "";
     inpAutor.value = "";
+    inpValor.value = "";
+    inpDuracao.value = "";
 
     // Recria a tabela com base nas tarefas do array
     criarTabela();
@@ -41,6 +47,8 @@ function criarTabela() {
         const tdTarefa = document.createElement("td");
         const tdAutor = document.createElement("td");
         const tdDepartamento = document.createElement("td");
+        const tdValor = document.createElement("td");
+        const tdDuracao = document.createElement("td");
         const tdImportancia = document.createElement("td");
         const tdExcluir = document.createElement("td");
         const botaoDeExcluir = document.createElement("button");
@@ -49,6 +57,8 @@ function criarTabela() {
         tdAutor.textContent = tarefa.autor;
         tdDepartamento.textContent = tarefa.departamento;
         tdImportancia.textContent = tarefa.importancia;
+        tdValor.textContent = tarefa.valor;
+        tdDuracao.textContent = tarefa.duracao;
         botaoDeExcluir.textContent = " X ";
         botaoDeExcluir.addEventListener("click", () => {
             tarefas.splice(index, 1); // Remove a tarefa do array
@@ -60,6 +70,8 @@ function criarTabela() {
         linha.appendChild(tdAutor);
         linha.appendChild(tdDepartamento);
         linha.appendChild(tdImportancia);
+        linha.appendChild(tdValor);
+        linha.appendChild(tdDuracao);
         linha.appendChild(tdExcluir);
         Bodytabela.appendChild(linha);
     });
