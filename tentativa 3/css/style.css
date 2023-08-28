@@ -26,3 +26,13 @@
     padding: 5px 10px;
     cursor: pointer;
 }
+
+label{
+    display: flex;
+    flex-direction: column;
+}
+
+.botoes{
+padding-top: 10px;
+
+}
