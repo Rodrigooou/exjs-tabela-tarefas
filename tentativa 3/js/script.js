@@ -53,18 +53,22 @@ function criarTabela() {
         const tdExcluir = document.createElement("td");
         const botaoDeExcluir = document.createElement("button");
 
+        // Preenche as células da linha com os valores da tarefa
         tdTarefa.textContent = tarefa.tarefa;
         tdAutor.textContent = tarefa.autor;
         tdDepartamento.textContent = tarefa.departamento;
         tdImportancia.textContent = tarefa.importancia;
         tdValor.textContent = tarefa.valor;
         tdDuracao.textContent = tarefa.duracao;
+
+        // Configura o botão de remoção
         botaoDeExcluir.textContent = " X ";
         botaoDeExcluir.addEventListener("click", () => {
             tarefas.splice(index, 1); // Remove a tarefa do array
             criarTabela(); // Recria a tabela
         });
 
+        // Adiciona as células à linha da tabela
         tdExcluir.appendChild(botaoDeExcluir);
         linha.appendChild(tdTarefa);
         linha.appendChild(tdAutor);
